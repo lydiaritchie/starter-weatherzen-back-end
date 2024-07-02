@@ -9,7 +9,7 @@ const app = express();
 
 app.use(cors())
 app.use(express.json());
-console.log("right before /observations");
+
 app.use("/observations", observationsRouter);
 
 app.use(notFound);
