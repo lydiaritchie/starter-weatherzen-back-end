@@ -11,9 +11,10 @@ async function create(req, res) {
 }
 
 async function list(req, res){
+  const data = await service.list();
   res.json({
-    data: observations,
-  });
+    data,
+  })
 }
 
 const validSkyConditions = [100, 101, 102, 103, 104, 106, 108, 109]
